@@ -22,11 +22,12 @@ body {
 }
 
 nav {
+  padding-right: 2rem;
   display: grid;
-  background-color: aquamarine;
   grid-area: nav;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 0.2fr;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 20px -20px;
 }
 
 .search {
@@ -53,6 +54,7 @@ button:focus {
 
 
 main {
+  background-color: #bbd2ff;
   grid-area: main;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -62,22 +64,64 @@ main {
   
 }
 .sidebar {
-  background-color: aqua;
+  background-color: #6699ff;
   grid-area: sidebar;
-  
+  padding: 0.5rem 1rem;
+  border-radius: 0px 20px 20px 0px;
+}
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px
+}
+.filter-white {
+  cursor: pointer;
+  height: 3.5rem;
+  color: aliceblue;
+  filter: invert(98%) sepia(27%) saturate(6529%) hue-rotate(178deg) brightness(111%) contrast(102%);
+}
+.option > a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 2rem;
+  margin: 1rem;
 }
 
+a:hover {
+  font-size: 2.2rem;
+  transition: 0.2s;
+}
+.option2 {
+  margin-top: 5rem;
+}
 
+.options, .options2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+
+}
+.filter-blue {
+  height: 4rem;
+  filter: invert(98%) sepia(27%) saturate(6529%) hue-rotate(178deg) brightness(111%) contrast(102%);
+}
 
 .dashboard {
   text-align: center;
   margin-top: 2rem;
-
+  color: aliceblue;
+  font-size: 3rem;
 }
 
 
+
 .search {
-  background-color: rgb(235, 206, 255);
   display: flex;
   justify-content: flex-start ;
   align-items: center;
@@ -87,24 +131,35 @@ main {
 }
 
 .profile {
-  background-color: rgb(175, 204, 233)
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5px;
 }
 
 .profile > .kujo {
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid black;cursor: pointer;
+}
+.profile p {
+  font-size: 2rem;
+}
+.profile .bell {
+  height: 2.5rem;
+  cursor: pointer;
 }
 .tag {
-  padding: 0.3rem 1rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0rem 0.5rem;
-  
 }
+
+
 .tag .kujo {
   width: 5rem;
   height: 5rem;
@@ -124,15 +179,41 @@ main {
 }
 
 .share {
-  background-color: #83c478;
+  display: flex;
+  justify-content: center;
+  
+}
+.share > button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  margin: 1rem;
+  width: 150px;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: aliceblue;
+  background-color: #6699ff;
+  border-radius: 25px;
+  text-align: center;
+
 }
 
+button:hover {
+  background-color: #97baff;
+}
 .project {
+  background-color: rgb(254, 254, 254);
   display: grid;
   grid-template: 1fr auto / 0.6rem 1fr;
   grid-gap: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 10px 20px 20px 10px;
 }
 main .projects > h4 {
   grid-column: 1/-1;
@@ -145,7 +226,7 @@ main .projects .project .text-block > p {
 .action-block {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 2rem;
 }
 .text-block {
   padding: 1rem;
@@ -160,22 +241,55 @@ main .projects .project .text-block > p {
 .border-block {
   grid-row: 1/-1;
   border-radius: 20px 0px 0px 20px;
-  background-color: black;
+  background-color: #f1ead2;
 }
 
 .project h5 {
   font-size: 1.5rem;
 }
 .project p {
-  color: rgb(200, 200, 200);
+  color: rgb(131, 131, 131);
 }
 .project img {
   height: 2rem;
   cursor: pointer;
 }
 .announce-trend {
+  background-color: #bbd2ff;
+  padding: 0rem 1rem;
   display: grid;
-  background-color: rgb(244, 233, 155);
+  border-radius: 20px;
+  
   grid-template-rows: 1fr 1fr;
+  color: rgba(0, 0, 0, 1)
+}
 
+.announcement {
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+.announcement-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(174, 174, 174);
+  gap: 1rem;
+  
+}
+
+.announcement-content h4 {
+  font-size: 1.5rem;
+}
+
+.announcement-content p {
+  color: rgb(153, 153, 153);
+}
+
+.head {
+  font-size: 2rem;
 }
