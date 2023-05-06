@@ -258,7 +258,7 @@ main .projects .project .text-block > p {
   padding: 0rem 1rem;
   display: grid;
   border-radius: 20px;
-  
+  grid-gap: 1rem;
   grid-template-rows: 1fr 1fr;
   color: rgba(0, 0, 0, 1)
 }
@@ -291,4 +291,36 @@ main .projects .project .text-block > p {
 
 .head {
   font-size: 2rem;
+}
+
+.trend-content {
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.trend img {
+  height: 3rem;
+
+}
+
+.trend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+}
+
+.user .light {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
